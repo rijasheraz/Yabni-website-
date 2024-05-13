@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form | Yabni</title> 
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Briem+Hand:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Briem+Hand:wght@100..900&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Briem+Hand:wght@100..900&family=Dancing+Script:wght@400..700&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Briem+Hand:wght@100..900&family=Dancing+Script:wght@400..700&family=Pacifico&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">    
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+body{
+  background: #ffffff;
+  overflow: hidden;
+}
+::selection{
+  background: rgba(26,188,156,0.3);
+}
+.form_container{
+  max-width: 440px;
+  padding: 0 20px;
+  margin: 170px auto;
+  background-color: #e8e6e6;
+}
+.wrapper{
+  width: 100%;
+  background: #e8e6e6;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);
+}
+.wrapper .title{
+  height: 70px;
+  background: #4e1070;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  font-size: 29px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper form{
+  padding: 30px 25px 25px 25px;
+}
+.wrapper form .row{
+  height: 45px;
+  margin-bottom: 15px;
+  position: relative;
+}
+.wrapper form .row input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 60px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+form .row input:focus{
+  border-color: #4e1070;
+  box-shadow: inset 0px 0px 2px 2px rgba(26,188,156,0.25);
+}
+form .row input::placeholder{
+  color: #999;
+}
+.wrapper form .row i{
+  position: absolute;
+  width: 47px;
+  height: 100%;
+  color: #fff;
+  font-size: 18px;
+  background: #4e1070;
+  border: 1px solid #4e1070;
+  border-radius: 5px 0 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper form .pass{
+  margin: -8px 0 20px 0;
+}
+.wrapper form .pass a{
+  color: #7d16a0;
+  font-size: 17px;
+  text-decoration: none;
+}
+.wrapper form .pass a:hover{
+  text-decoration: underline;
+}
+.wrapper form .button input{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 0px;
+  background: #4e1070;
+  border: 1px solid #4e1070;
+  cursor: pointer;
+}
+form .button input:hover{
+  background: #4e1070;
+}
+.wrapper form .signup-link{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 17px;
+}
+.wrapper form .signup-link a{
+  color: #4e1070;
+  text-decoration: none;
+}
+form .signup-link a:hover{
+  text-decoration: underline;
+}
+    /* Add animation */
+    #login-form, #signup-box {
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    }
+    #login-form.hidden, #signup-box.hidden {
+      opacity: 0;
+      transform: translateX(-100px);
+      transform: translateY(30px) scale(0.9) rotateX(30deg);
+    }
+    #signup-box {
+      display: none;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar">
+      <img class="logo" src="images/yabni-logo0.png" alt="yabni logo" />
+      <a href="index.html">Home</a>
+      <a href="#">Portfolio</a>
+      <a href="#">Product</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
+      <a href="#">About</a>
+      <div class="login-nav">
+        <a href="login.html">Login </a>
+      </div>
+
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="8" height="7" fill="white" class="bi bi-globe" viewBox="0 0 16 16">
+          <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855A8 8 0 0 0 5.145 4H7.5zM4.09 4a9.3 9.3 0 0 1 .64-1.539 7 7 0 0 1 .597-.933A7.03 7.03 0 0 0 2.255 4zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a7 7 0 0 0-.656 2.5zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5zM8.5 5v2.5h2.99a12.5 12.5 0 0 0-.337-2.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5zM5.145 12q.208.58.468 1.068c.552 1.035 1.218 1.65 1.887 1.855V12zm.182 2.472a7 7 0 0 1-.597-.933A9.3 9.3 0 0 1 4.09 12H2.255a7 7 0 0 0 3.072 2.472M3.82 11a13.7 13.7 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5zm6.853 3.472A7 7 0 0 0 13.745 12H11.91a9.3 9.3 0 0 1-.64 1.539 7 7 0 0 1-.597.933M8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855q.26-.487.468-1.068zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.7 13.7 0 0 1-.312 2.5m2.802-3.5a7 7 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7 7 0 0 0-3.072-2.472c.218.284.418.598.597.933M10.855 4a8 8 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4z"/>
+        </svg>
+    </nav>
+  </div>
+  <div class="form_container">
+    <div class="wrapper">
+      <form id="login-form">
+        <div class="title"><span>Login Form</span></div>
+        <br>
+        <div class="row">
+          <i class="fas fa-user"></i>
+          <input type="text" placeholder="Email or Phone" required>
+        </div>
+        <div class="row">
+          <i class="fas fa-lock"></i>
+          <input type="password" placeholder="Password" required>
+        </div>
+        <div class="pass"><a href="#" id="forgot-password">Forgot password?</a></div>
+        <div class="row button">
+          <input type="submit" value="Login">
+        </div>
+        <div class="signup-link">Not a member? <a href="#" id="signup-link">Signup now</a></div>
+      </form>
+      <div id="signup-box" style="display: none;">
+        <div class="title"><span>Sign Up</span></div>
+        <form id="signup-form">
+          <div class="row">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Name" required>
+          </div>
+          <div class="row">
+            <i class="fas fa-envelope"></i>
+            <input type="email" placeholder="Email" required>
+          </div>
+          <div class="row">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Password" required>
+          </div>
+          <div class="row button">
+            <input type="submit" value="Signup">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const loginForm = document.getElementById('login-form');
+    const signupBox = document.getElementById('signup-box');
+    const signupLink = document.getElementById('signup-link');
+
+    signupLink.addEventListener('click', function(event) {
+      event.preventDefault();
+      loginForm.style.opacity = '0';
+      loginForm.style.transform = 'translateX(-100px)';
+      setTimeout(function() {
+        loginForm.style.display = 'none';
+        signupBox.style.display = 'block';
+        signupBox.style.opacity = '1';
+        signupBox.style.transform = 'translateX(0)';
+      }, 500);
+      document.title = "Sign Up | CodingLab"; // Change the title
+    });
+  </script>
+</body>
+</html>
